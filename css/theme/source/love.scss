@@ -15,7 +15,11 @@
 
 
 // Override theme settings (see ../template/settings.scss)
-$backgroundColor: rgba(0, 0, 0, 0);
+$backgroundColor: rgba(0, 0, 0, 0.2);
+
+.reveal .state-background {
+    background-color: $backgroundColor;
+}
 
 $mainFont: 'Open Sans', sans-serif;
 $linkColor: #e7ad52;
@@ -34,15 +38,52 @@ $mainFontSize: 30px;
 
 // Custom styles
 #twitter {
+  background: url('/images/twitter-icon.png') no-repeat;
+  background-size: auto 50px;
   clear: both;
   font-family: $headingFont;
   font-size: 0.6em;
   float: left;
-  margin: 36% 0 0 20%;
+  height: 50px;
+  margin: 40% 0 0 -60%;
+  padding: 15px 0 0 56px;
+  position: absolute;
   opacity: 0.9;
  }
 
-// To give a litte more constrast against the background parallax image
-.reveal .backgrounds .slide-background {
-    background-color: rgba(0, 0, 0, 0.3)
-}
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress span {
+  background: rgba(255, 255, 255, 0.8); }
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls div.navigate-left,
+.reveal .controls div.navigate-left.enabled {
+  border-right-color: #fff; }
+
+.reveal .controls div.navigate-right,
+.reveal .controls div.navigate-right.enabled {
+  border-left-color: #fff; }
+
+.reveal .controls div.navigate-up,
+.reveal .controls div.navigate-up.enabled {
+  border-bottom-color: #fff; }
+
+.reveal .controls div.navigate-down,
+.reveal .controls div.navigate-down.enabled {
+  border-top-color: #fff; }
+
+.reveal .controls div.navigate-left.enabled:hover {
+  border-right-color: #aaa; }
+
+.reveal .controls div.navigate-right.enabled:hover {
+  border-left-color: #aaa; }
+
+.reveal .controls div.navigate-up.enabled:hover {
+  border-bottom-color: #aaa; }
+
+.reveal .controls div.navigate-down.enabled:hover {
+  border-top-color: #aaa; }

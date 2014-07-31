@@ -3,12 +3,15 @@
  */
 @import url(https://fonts.googleapis.com/css?family=Montserrat:700);
 @import url(https://fonts.googleapis.com/css?family=Open+Sans:400,700,400italic,700italic);
+.reveal .state-background {
+  background-color: rgba(0, 0, 0, 0.2); }
+
 /*********************************************
  * GLOBAL STYLES
  *********************************************/
 body {
-  background: rgba(0, 0, 0, 0);
-  background-color: rgba(0, 0, 0, 0); }
+  background: rgba(0, 0, 0, 0.2);
+  background-color: rgba(0, 0, 0, 0.2); }
 
 .reveal {
   font-family: "Open Sans", sans-serif;
@@ -134,12 +137,51 @@ body {
   color: #e7ad52; }
 
 #twitter {
+  background: url("/images/twitter-icon.png") no-repeat;
+  background-size: auto 50px;
   clear: both;
   font-family: "Montserrat", Impact, sans-serif;
   font-size: 0.6em;
   float: left;
-  margin: 36% 0 0 20%;
+  height: 50px;
+  margin: 40% 0 0 -60%;
+  padding: 15px 0 0 56px;
+  position: absolute;
   opacity: 0.9; }
 
-.reveal .backgrounds .slide-background {
-  background-color: rgba(0, 0, 0, 0.3); }
+/*********************************************
+ * PROGRESS BAR
+ *********************************************/
+.reveal .progress span {
+  background: rgba(255, 255, 255, 0.8); }
+
+/*********************************************
+ * NAVIGATION CONTROLS
+ *********************************************/
+.reveal .controls div.navigate-left,
+.reveal .controls div.navigate-left.enabled {
+  border-right-color: #fff; }
+
+.reveal .controls div.navigate-right,
+.reveal .controls div.navigate-right.enabled {
+  border-left-color: #fff; }
+
+.reveal .controls div.navigate-up,
+.reveal .controls div.navigate-up.enabled {
+  border-bottom-color: #fff; }
+
+.reveal .controls div.navigate-down,
+.reveal .controls div.navigate-down.enabled {
+  border-top-color: #fff; }
+
+.reveal .controls div.navigate-left.enabled:hover {
+  border-right-color: #aaa; }
+
+.reveal .controls div.navigate-right.enabled:hover {
+  border-left-color: #aaa; }
+
+.reveal .controls div.navigate-up.enabled:hover {
+  border-bottom-color: #aaa; }
+
+.reveal .controls div.navigate-down.enabled:hover {
+  border-top-color: #aaa; }
